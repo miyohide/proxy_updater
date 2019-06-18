@@ -23,6 +23,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 }
 
+// Execute はコマンドの実行
 func Execute() {
 	// 通常の出力は標準出力、エラーはエラー出力
 	rootCmd.SetOutput(os.Stdout)
