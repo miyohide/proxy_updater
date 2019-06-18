@@ -15,8 +15,8 @@ limitations under the License.
 */
 package main
 
-import "proxy_updater/cmd"
+import "github.com/miyohide/proxy_updater/cmd"
 
 func main() {
-  cmd.Execute()
+	cmd.Execute()
 }
