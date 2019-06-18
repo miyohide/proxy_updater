@@ -24,8 +24,11 @@ to quickly create a Cobra application.`,
 }
 
 func Execute() {
+	// 通常の出力は標準出力、エラーはエラー出力
+	rootCmd.SetOutput(os.Stdout)
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
+		rootCmd.SetOutput(os.Stderr)
+		rootCmd.Println(err)
 		os.Exit(1)
 	}
 }
