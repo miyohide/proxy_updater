@@ -23,7 +23,7 @@ func NewCmdRoot() *cobra.Command {
 	cmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.proxy_updater.yaml)")
 	cmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
-	cmd.AddCommand(NewCmdShow())
+	cmd.AddCommand(NewCmdUpdate())
 	return cmd
 }
 
