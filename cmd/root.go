@@ -12,6 +12,7 @@ import (
 
 var cfgFile string
 
+// NewCmdRoot はアプリケーションのコマンド処理を定義
 func NewCmdRoot() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "proxy_updater",

@@ -4,6 +4,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
+// NewCmdShow はshowサブコマンドを定義したもの
 func NewCmdShow() *cobra.Command {
 	type Options struct {
 		optint int
