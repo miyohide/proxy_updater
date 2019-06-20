@@ -7,8 +7,8 @@ import (
 // NewCmdShow はshowサブコマンドを定義したもの
 func NewCmdShow() *cobra.Command {
 	type Options struct {
-		optint int
-		optstr string
+		optldap     string
+		optpassword string
 	}
 
 	var (
@@ -19,11 +19,11 @@ func NewCmdShow() *cobra.Command {
 		Use:   "show",
 		Short: "A brief description of your command",
 		Run: func(cmd *cobra.Command, args []string) {
-			cmd.Printf("show called: optint: %d, optstr: %s", o.optint, o.optstr)
+			cmd.Printf("show called: optldap: %s, optpassword: %s", o.optldap, o.optpassword)
 		},
 	}
-	cmd.Flags().IntVarP(&o.optint, "int", "i", 0, "int option")
-	cmd.Flags().StringVarP(&o.optstr, "str", "s", "default", "string option")
+	cmd.Flags().StringVarP(&o.optldap, "ldap", "l", "LDAP ID", "ldap option")
+	cmd.Flags().StringVarP(&o.optpassword, "password", "p", "Password", "password option")
 
 	return cmd
 }

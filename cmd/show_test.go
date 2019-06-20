@@ -12,9 +12,9 @@ func TestShow(t *testing.T) {
 		command string
 		want    string
 	}{
-		{command: "proxy_updater show", want: "show called: optint: 0, optstr: default"},
-		{command: "proxy_updater show --int 10", want: "show called: optint: 10, optstr: default"},
-		{command: "proxy_updater show --str test", want: "show called: optint: 0, optstr: test"},
+		{command: "proxy_updater show", want: "show called: optldap: LDAP ID, optpassword: Password"},
+		{command: "proxy_updater show --ldap 10", want: "show called: optldap: 10, optpassword: Password"},
+		{command: "proxy_updater show --password test", want: "show called: optldap: LDAP ID, optpassword: test"},
 	}
 
 	for _, c := range cases {
