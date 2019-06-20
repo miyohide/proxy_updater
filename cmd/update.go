@@ -22,8 +22,8 @@ func NewCmdUpdate() *cobra.Command {
 			cmd.Printf("update called: optldap: %s, optpassword: %s", o.optldap, o.optpassword)
 		},
 	}
-	cmd.Flags().StringVarP(&o.optldap, "ldap", "l", "LDAP ID", "ldap option")
-	cmd.Flags().StringVarP(&o.optpassword, "password", "p", "Password", "password option")
+	cmd.Flags().StringVar(&o.optldap, "ldap", "LDAP ID", "ldap option")
+	cmd.Flags().StringVar(&o.optpassword, "password", "Password", "password option")
 
 	return cmd
 }
